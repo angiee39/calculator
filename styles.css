@@ -1,3 +1,45 @@
 .flex {
     display: flex;
 }
+
+.number:hover {
+    background-color: burlywood;
+}
+
+#clear:hover {
+    background-color: burlywood;
+}
+
+#delete:hover {
+    background-color: burlywood;
+}
+
+.number {
+    background-color: beige;
+    border: solid blue;
+    width: 30px;
+    height: 30px;
+
+}
+
+#clear {
+    background-color: beige;
+    border: solid blue;
+    width: 66px;
+    height: 30px;
+}
+
+#deletee {
+    background-color: beige;
+    border: solid blue;
+    width: 66px;
+    height: 30px;
+}
+
+#display {
+    background-color: beige;
+    border: solid blue;
+    width: 138px;
+    height: 40px;
+}
+
