@@ -20,19 +20,27 @@ function division(a,b) {
 
 
 function operate(a,b,o) {
-    if (o == plus) {
-        add(a,b)
+    let sum = 0;
+    if (o == "plus") {
+        sum = addition(a,b);
     }
-    else if (o == minus) {
-        subtract(a,b)
+    else if (o == "minus") {
+        sum = subtraction(a,b);
     }
-    else if (o == star) {
-        multiply(a,b);
+    else if (o == "star") {
+        sum = multiplication(a,b);
     }
-    else {
-        divide(a,b)
+    else if (o == "slash") {
+        sum = division(a,b);
     }
+    return sum;
 }
+
+// Display 
+let displayValue = document.getElementById("display").textContent;
+let num1 = 0;
+let num2 = 0;
+let opr = "";
 
 // All querySelectors
 const display = document.querySelector('#display');
@@ -53,17 +61,9 @@ const subtract = document.querySelector('#subtract');
 const decimal = document.querySelector('#decimal');
 const zero = document.querySelector('#zero');
 const equal = document.querySelector('#equal');
-const plus = document.querySelector('#plus');
+const add = document.querySelector('#add');
 
-// All eventListners
-clear.addEventListener('click', () => {
-    display.textContent = 'Clear' 
-  });
-
-deletee.addEventListener('click', () => {
-    
-  });
-
+// Numbers' eventListners
 seven.addEventListener('click', () => {
     display.textContent += '7' 
   });
@@ -74,10 +74,6 @@ eight.addEventListener('click', () => {
 
 nine.addEventListener('click', () => {
     display.textContent += '9' 
-  });
-
-divide.addEventListener('click', () => {
-    
   });
 
 four.addEventListener('click', () => {
@@ -92,10 +88,6 @@ six.addEventListener('click', () => {
     display.textContent += '6' 
   });
 
-multiply.addEventListener('click', () => {
-    
-  });
-
 one.addEventListener('click', () => {
     display.textContent += '1' 
   });
@@ -108,10 +100,6 @@ three.addEventListener('click', () => {
     display.textContent += '3' 
   });
 
-subtract.addEventListener('click', () => {
-   
-  });
-
 decimal.addEventListener('click', () => {
     display.textContent += '.' 
   });
@@ -120,10 +108,49 @@ zero.addEventListener('click', () => {
     display.textContent += '0' 
   });
 
-equal.addEventListener('click', () => {
-    
-  });
 
-plus.addEventListener('click', () => {
-     
-  });
+// Clear & deletee's eventListners
+clear.addEventListener('click', () => {
+    display.textContent = '';
+    num1 = 0;
+    num2 = 0
+    opr = ""
+});
+
+deletee.addEventListener('click', () => {
+  
+});
+
+// Operators' eventListners
+divide.addEventListener('click', () => {
+    num1 = parseFloat(display.textContent);
+    opr = "slash";
+    display.textContent = '';
+    
+});
+
+multiply.addEventListener('click', () => {
+    num1 = parseFloat(display.textContent);
+    opr = "star";
+    display.textContent = '';
+});
+
+subtract.addEventListener('click', () => {
+    num1 = parseFloat(display.textContent);
+    opr = "minus";
+    display.textContent = '';
+});
+
+equal.addEventListener('click', () => {
+    num2 = parseFloat(display.textContent);
+    display.textContent = operate(num1,num2,opr);
+});
+
+add.addEventListener('click', () => {
+    num1 = parseFloat(display.textContent);
+    opr = "plus";
+    display.textContent = '';
+});
+
+
+
