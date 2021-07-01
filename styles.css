@@ -5,44 +5,54 @@
 
 body {
     font-size: 30px;
-    display: block;
-    margin: 50px;
+}
+.content {
+    width: 70%;
+    margin: 0 auto;
 }
 
 #clear:hover {
     background-color: burlywood;
 }
 
-#deletee:hover {
+#decimal {
+    background-color: brown !important;
+}
+
+.number:hover {
     background-color: rgb(221, 183, 133);
 }
 
 .number {
     background-color: beige;
     border: solid blue;
-    width: 50px;
-    height: 50px;
-
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
 }
 
 #clear {
     background-color: beige;
     border: solid blue;
-    width: 106px;
-    height: 50px;
+    width: 120px;
+    height: 60px;
+    box-sizing: border-box;
 }
 
 #deletee {
-    background-color: beige;
+    background-color: brown;
     border: solid blue;
-    width: 106px;
-    height: 50px;
+    width: 120px;
+    height: 60px;
+    box-sizing: border-box;
 }
 
 #display {
     background-color: beige;
-    border: solid blue;
-    width: 218px;
-    height: 50px;
+    border: 5px solid blue;
+    width: 240px;
+    height: 60px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
