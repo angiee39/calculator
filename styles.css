@@ -2,8 +2,11 @@
     display: flex;
 }
 
-.number:hover {
-    background-color: burlywood;
+
+body {
+    font-size: 30px;
+    display: block;
+    margin: 50px;
 }
 
 #clear:hover {
@@ -17,29 +20,29 @@
 .number {
     background-color: beige;
     border: solid blue;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 
 }
 
 #clear {
     background-color: beige;
     border: solid blue;
-    width: 66px;
-    height: 30px;
+    width: 106px;
+    height: 50px;
 }
 
 #deletee {
     background-color: beige;
     border: solid blue;
-    width: 66px;
-    height: 30px;
+    width: 106px;
+    height: 50px;
 }
 
 #display {
     background-color: beige;
     border: solid blue;
-    width: 138px;
-    height: 40px;
+    width: 218px;
+    height: 50px;
 }
 
